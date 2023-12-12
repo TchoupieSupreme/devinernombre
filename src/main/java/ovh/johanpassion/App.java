@@ -34,7 +34,6 @@ public class App {
 
         //Jeux avec l'ordinateur : 
         int nbADeviner = random();
-        Scanner clavier = new Scanner(System.in);
         System.out.print("Devine le nombre que j'ai choisis entre 1 et 100 : ");
         int nbDonner = random();
         System.out.println(nbADeviner);
@@ -51,7 +50,6 @@ public class App {
             }
         }
         System.out.println("C'est gagné !");
-        clavier.close();
     }
 
     public static int random() {
@@ -65,7 +63,7 @@ public class App {
         if (plusGrand == true) {
             return random.nextInt((100 - nbDonner) + 1) + nbDonner;
         } else {
-            return random.nextInt((nbDonner - 0) + 1) + 0;
+            return random.nextInt(nbDonner+ 1);
         }
 
     }
